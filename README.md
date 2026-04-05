@@ -1,71 +1,137 @@
-[index.html]
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StriveX Sportswear</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-<h1>StriveX</h1>
-<nav>
-<a href="#about">About</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-<section class="hero">
-<h2>Custom Sublimated Kits for Teams</h2>
-<p>Built for performance. Designed to stand out.</p>
-<a href="https://www.instagram.com/strivex_sports" target="_blank" class="btn">Order Now</a>
-</section>
-<section id="about" class="section">
-<h2>About StriveX</h2>
-<p>Premium custom sublimated kits for clubs and teams.</p>
-</section>
-<section id="gallery" class="section">
-<h2>Our Work</h2>
-<div class="gallery">
-<img src="images/kit1.jpg">
-<img src="images/kit2.jpg">
-<img src="images/team.jpg">
-</div>
-</section>
-<section id="contact" class="section">
-<h2>Contact</h2>
-<p>Email: strivexsportswear@gmail.com</p>
-<p>Instagram: @strivex_sports</p>
-<p>Facebook: StriveX Sportswear</p>
-</section>
-</body>
-</html>
-[style.css]
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-background: #0a0f0a;
-color: white;
-font-family: Arial;
+    font-family: 'Poppins', sans-serif;
+    background: #050805;
+    color: white;
 }
-header {
-display: flex;
-justify-content: space-between;
-padding: 20px;
-background: black;
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: black;
+    position: sticky;
+    top: 0;
 }
-h1 { color: #00ff88; }
+
+.logo {
+    color: #00ff88;
+    font-weight: 700;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+/* HERO */
 .hero {
-text-align: center;
-padding: 80px;
-background: linear-gradient(black, #001a0f);
+    height: 90vh;
+    background: url('images/kit1.jpg') center/cover no-repeat;
+    position: relative;
 }
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero h2 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
 .btn {
-background: #00ff88;
-padding: 10px 20px;
-color: black;
+    padding: 12px 25px;
+    background: #00ff88;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
-.gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-gap: 10px;
+
+.btn:hover {
+    background: white;
+}
+
+/* SECTIONS */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #0c140c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* FEATURES */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* CONTACT */
+.contact a {
+    color: #00ff88;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
 }
