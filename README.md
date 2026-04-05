@@ -111,27 +111,4 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
-}
-
-/* FEATURES */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* CONTACT */
-.contact a {
-    color: #00ff88;
-    text-decoration: none;
-    margin: 10px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: black;
-}
+    transform: translateY(-10px)
